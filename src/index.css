@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18333f;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+section[id] { scroll-margin-top: 120px; }
+::selection { background: #f8bdd2; color: #12364a; }
+
+@layer components {
+  .container-shell { @apply mx-auto w-full max-w-[1180px] px-5 sm:px-6 lg:px-8; }
+  .section-pad { @apply py-16 md:py-20 lg:py-24; }
+  .eyebrow { @apply mb-3 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.17em] text-hospital-teal; }
+  .brand-mark { @apply h-14 w-14 overflow-hidden rounded-2xl border border-hospital-teal/10 bg-hospital-tealSoft shadow-sm; }
+  .hero-grid { @apply grid items-center gap-12 lg:grid-cols-[1.12fr_.88fr] lg:gap-16; }
+  .btn-primary { @apply inline-flex min-h-12 items-center justify-center rounded-xl border border-hospital-teal bg-hospital-teal px-5 py-3 font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-[#0b655e] focus:outline-none focus:ring-4 focus:ring-hospital-teal/15; }
+  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-xl border border-hospital-teal/30 bg-white px-5 py-3 font-extrabold text-hospital-teal transition hover:-translate-y-0.5 hover:bg-hospital-tealSoft focus:outline-none focus:ring-4 focus:ring-hospital-teal/10; }
+  .card { @apply rounded-3xl border border-hospital-line bg-white shadow-card; }
+  .field { @apply mt-2 h-12 w-full rounded-xl border border-[#cddedd] bg-white px-3 text-hospital-ink outline-none transition focus:border-hospital-teal focus:ring-4 focus:ring-hospital-teal/10; }
+}
+
+.hospital-heartline {
+  position: relative;
+}
+.hospital-heartline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 84px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0f766e 0 58%, #d7195a 58% 100%);
+}
+
+@media (max-width: 767px) {
+  body { padding-bottom: 72px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
