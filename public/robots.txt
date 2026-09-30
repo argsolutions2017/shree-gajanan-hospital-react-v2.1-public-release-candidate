@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shree-gajanan-hospital.netlify.app/sitemap.xml
+Sitemap: https://gajananhospitalwarud.com/sitemap.xml
